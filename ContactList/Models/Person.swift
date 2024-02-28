@@ -15,7 +15,7 @@ struct Person {
         "\(firstName) \(lastName)"
     }
     
-    static func gerPersons() -> [Person] {
+    static func getPersons() -> [Person] {
         let user = DataStore()
         var persons: [Person] = []
         

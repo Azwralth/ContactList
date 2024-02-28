@@ -9,15 +9,7 @@ import UIKit
 
 final class PersonsListViewController: UITableViewController {
     
-    var person: [Person]!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if let tabBarVC = self.tabBarController as? TabBarViewController {
-            person = tabBarVC.personList
-        }
-    }
+    var person: [Person] = []
 }
 
 

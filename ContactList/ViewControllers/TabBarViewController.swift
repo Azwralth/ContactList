@@ -8,14 +8,10 @@
 import UIKit
 
 final class TabBarViewController: UITabBarController {
+    
+    private var personList = Person.getPersons()
 
-    let personList = Person.gerPersons()
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let viewControllers else { return }
         
         viewControllers.forEach {
@@ -23,7 +19,7 @@ final class TabBarViewController: UITabBarController {
                 contactVC.person = personList
             } else if let personVC = $0 as? PersonsListViewController {
                 personVC.person = personList
-            } 
+            }
         }
     }
 }
